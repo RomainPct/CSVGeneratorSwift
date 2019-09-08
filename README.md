@@ -1,3 +1,3 @@
 # CSVGeneratorSwift
 
-A description of this package.
+Generate CSV from any struct or array with a fast and customizable generator.
