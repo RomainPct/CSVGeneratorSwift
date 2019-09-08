@@ -20,23 +20,18 @@ let CSVString_quotes:String = #"""
 """#
 
 let quotesDictionary:[String:Quote] = [
-    "1DD5" : Quote(text: #""Dans la vie, on ne fait pas ce que l'on veut mais on est responsable de ce que l'on est.""#),
-    "4RTO" : Quote(text: #""There is nothing permanent; except change.""#),
-    "90PM" : Quote(text: "Mieux vaut une conscience tranquille qu'une destinée prospère. J'aime mieux un bon sommeil qu'un bon lit."),
+    "1DD5" : Quote(text: #""Dans la vie, on ne fait pas ce que l'on veut mais on est responsable de ce que l'on est.""#)
 ]
 
 let CSVString_quotesDictionnary:String = #"""
-"90PM","Mieux vaut une conscience tranquille qu'une destinée prospère. J'aime mieux un bon sommeil qu'un bon lit.","2001-01-01 07:13:20 +0000"
-"4RTO","""There is nothing permanent; except change.""","2001-01-01 07:13:20 +0000"
 "1DD5","""Dans la vie, on ne fait pas ce que l'on veut mais on est responsable de ce que l'on est.""","2001-01-01 07:13:20 +0000"
 """#
 
 let dict = [
-    "Leo" : "tralalalalalal",
     "Lea" : "Tralalalalal"
 ]
 
-let CSVString_dict:String = #"{""Leo"":""tralalalalalal"",""Lea"":""Tralalalalal""}"#
+let CSVString_dict:String = #"{""Lea"":""Tralalalalal""}"#
 
 let cars:[Car] = [
     Car(name: "Taycan", dimensions: [4684,1923,1624], engine: Engine(type: .electric, autonomy: 500)),
