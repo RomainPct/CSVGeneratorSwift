@@ -8,7 +8,7 @@ let package = Package(
     platforms: [
        .iOS(.v10),
        .watchOS(.v2),
-       .macOS(SupportedPlatform.MacOSVersion.v10_12),
+       .macOS(.v10_12),
        .tvOS(.v9)
     ],
     products: [
@@ -16,10 +16,6 @@ let package = Package(
         .library(
             name: "CSVGeneratorSwift",
             targets: ["CSVGeneratorSwift"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

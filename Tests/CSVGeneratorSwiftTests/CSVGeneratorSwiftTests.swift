@@ -21,6 +21,7 @@ final class CSVGeneratorSwiftTests: XCTestCase {
     func testDateFormatting() {
         let myDate = Date(timeIntervalSinceReferenceDate: 267682629)
         let generator = CSVGeneratorSwift()
+        XCTAssertEqual(generator.getCSVExportableValue(myDate), "2009-06-26 04:17:09 +0000")
         generator.dateFormat = "dd-MM-YYYY"
         XCTAssertEqual(generator.getCSVExportableValue(myDate), "26-06-2009")
         generator.dateFormat = "HH:mm:ss"
