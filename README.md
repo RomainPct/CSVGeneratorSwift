@@ -1,9 +1,35 @@
 # CSVGeneratorSwift
-A `really lightweight` library to easily export `any array or dictionary` to a CSV spreadsheet.
+A `really lightweight` library to easily export `any array or dictionary` to a CSV spreadsheet.\
 It's also `customizable` and support  `Swift 5.1` !
+#### Table of Contents  
+1. [Installation](#import)  
+2. [Make your class and struct compatible](#step1)
+3. [Generate a CSV spreadsheet from any array or dictionary](#step2)
+4. [Custom the CSV Generator](#step3)
+
+<a name="import"/>
+
+## Installation
+
+#### Swift Package Manager
+```swift
+.package(url: "https://github.com/RomainPct/CSVGeneratorSwift")
+```
+
+#### CocoaPods
+```swift
+pod "CSVGeneratorSwift"
+```
+
+#### Carthage
+```swift
+github "RomainPct/CSVGeneratorSwift.swift"
+```
+
+<a name="step1"/>
 
 ## How to generate a CSV spreadsheet ?
-### 1. Use the CSVExportable protocol
+### 1. Use the CSVExportable protocol to make your classes and structs compatible.
 Make any Struct or Class compatible with CSVGeneratorSwift by implementing the lightweight CSVExportable protocol.\
 Just define a varget called CSVFields which return an array of the values you want in your output CSV file.\
 Order values according to the output organization you want.
@@ -37,6 +63,8 @@ struct Engine : CSVExportable {
 }
 ```
 
+<a name="step2"/>
+
 ### 2. Generate a CSV spreadsheet from any array or dictionary of CSVExportable conform struct or class
 1. Create a CSVGeneratorSwift instance
 2. Call the generate function passing your array/dictionary as first parameter
@@ -65,6 +93,8 @@ case .failure(let error):
     print("CSV generation failed : \(error.localizedDescription)")
 }
 ```
+
+<a name="step3"/>
 
 ### 3. Custom the CSV Generator
 #### File destination
