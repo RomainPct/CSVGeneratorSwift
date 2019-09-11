@@ -7,22 +7,25 @@
 
 import Foundation
 
-class CSVGeneratorSwift {
+public class CSVGeneratorSwift {
     
 //    MARK: File options
-    var encoding:String.Encoding = .utf8
-    var destination:URL?
+    public var encoding:String.Encoding = .utf8
+    public var destination:URL?
         
 //    MARK: CSV rules options
-    var columnSeparator = ","
-    var lineEnd = "\n"
+    public var columnSeparator = ","
+    public var lineEnd = "\n"
         
 //    MARK: Formatting options
-    var dateFormat:String?
-    var jsonWritingOptions:JSONSerialization.WritingOptions = .prettyPrinted
+    public var dateFormat:String?
+    public var jsonWritingOptions:JSONSerialization.WritingOptions = .prettyPrinted
+    
+//    MARK: Public initializer
+    public init() {}
     
 //    MARK: CSV Generation functions for arrays
-    func generate<T : CSVExportable>(from data:[T], name:String = "\(String(describing: T.self))s") -> Result<URL,Error> {
+    public func generate<T : CSVExportable>(from data:[T], name:String = "\(String(describing: T.self))s") -> Result<URL,Error> {
         let csvString = getCSVString(from: data)
         return saveCSV(text: csvString, name: name)
     }
@@ -34,7 +37,7 @@ class CSVGeneratorSwift {
     }
     
 //    MARK: CSV Generation functions for dictionnaries
-    func generate<T : CSVExportable>(from data:[AnyHashable:T], name:String = "\(String(describing: T.self))s") -> Result<URL,Error> {
+    public func generate<T : CSVExportable>(from data:[AnyHashable:T], name:String = "\(String(describing: T.self))s") -> Result<URL,Error> {
         let csvString = getCSVString(from: data)
         return saveCSV(text: csvString, name: name)
     }

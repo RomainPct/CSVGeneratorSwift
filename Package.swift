@@ -26,5 +26,6 @@ let package = Package(
         .testTarget(
             name: "CSVGeneratorSwiftTests",
             dependencies: ["CSVGeneratorSwift"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )

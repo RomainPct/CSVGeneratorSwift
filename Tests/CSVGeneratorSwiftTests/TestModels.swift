@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import CSVGeneratorSwift
+import CSVGeneratorSwift
 
 struct Car : CSVExportable {
     

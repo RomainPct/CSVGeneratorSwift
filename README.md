@@ -13,7 +13,7 @@ It's also `customizable` and support  `Swift 5.1` !
 
 #### Swift Package Manager
 ```swift
-.package(url: "https://github.com/RomainPct/CSVGeneratorSwift")
+.package(url: "https://github.com/RomainPct/CSVGeneratorSwift", from: "0.0.0")
 ```
 
 #### CocoaPods
