@@ -1,0 +1,31 @@
+{
+  "Mac" : [
+    {
+      "name" : "CSVGeneratorSwift",
+      "hash" : "fa046dcf7356f369755e735447d9b8a9404eca2549dcedc0cd20a66e71440bb4",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ],
+  "watchOS" : [
+    {
+      "name" : "CSVGeneratorSwift",
+      "hash" : "c3a6920ddc2a89d5ef912cfd9ddb482302e382bfbf08b09d53dba720278e8117",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ],
+  "tvOS" : [
+    {
+      "name" : "CSVGeneratorSwift",
+      "hash" : "df3375f7125db697e23740ac1212653f373a05e4f45eadae0adfd58d9b6e7807",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ],
+  "commitish" : "0.3.2",
+  "iOS" : [
+    {
+      "name" : "CSVGeneratorSwift",
+      "hash" : "641b04512b5e13c90217de8c85834a5060db0745f2f8e864a66a40cc6e718a43",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}

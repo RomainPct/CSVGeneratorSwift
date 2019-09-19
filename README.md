@@ -1,6 +1,13 @@
 # CSVGeneratorSwift
 A `really lightweight` library to easily export `any array or dictionary` to a CSV spreadsheet.\
 It's also `customizable` and support  `Swift 5.1` !
+
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
+[![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
+
+
 #### Table of Contents  
 1. [Installation](#import)  
 2. [Make your class and struct compatible](#step1)
@@ -65,7 +72,7 @@ struct Engine : CSVExportable {
 2. Call the generate function passing your array/dictionary as first parameter
 3. Pass an optional file name to the generate function *Default is your struct/class name with a "s" (ex : The output of an array of Car instances is called "Cars")*
 4. Read the result (which is a Swift.Result that help you to ensure a clean and readable code).
-5. If the operation succed, do what you want with the file url (share it with the user, save it somewhere...)
+5. If the operation succeed, do what you want with the file url (share it with the user, save it somewhere...)
 6. Else, handle the error
 
 ```swift

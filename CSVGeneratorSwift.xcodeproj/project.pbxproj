@@ -28,7 +28,6 @@
 		OBJ_46 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* TestData.swift */; };
 		OBJ_47 /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* TestModels.swift */; };
 		OBJ_48 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* XCTestManifests.swift */; };
-		OBJ_50 /* CSVGeneratorSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CSVGeneratorSwift::CSVGeneratorSwift::Product" /* CSVGeneratorSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		"CSVGeneratorSwift::CSVGeneratorSwift::Product" /* CSVGeneratorSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CSVGeneratorSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"CSVGeneratorSwift::CSVGeneratorSwiftTests::Product" /* CSVGeneratorSwiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CSVGeneratorSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CSVGeneratorSwift::CSVGeneratorSwiftTests::Product" /* CSVGeneratorSwiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = CSVGeneratorSwiftTests.xctest; path = "/Users/romainpenchenat/Xcode Apps/CSVGeneratorSwift/build/Debug/CSVGeneratorSwiftTests.xctest"; sourceTree = "<absolute>"; };
+		DE57AB0F2334192100D52C8A /* CSVGeneratorSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVGeneratorSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE57AB1023341BAE00D52C8A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_10 /* CSVGeneratorSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVGeneratorSwift.swift; sourceTree = "<group>"; };
 		OBJ_13 /* CSVGeneratorSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVGeneratorSwiftTests.swift; sourceTree = "<group>"; };
 		OBJ_14 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
@@ -73,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_50 /* CSVGeneratorSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,25 +99,16 @@
 			path = Tests/CSVGeneratorSwiftTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_17 /* Products */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
-				"CSVGeneratorSwift::CSVGeneratorSwift::Product" /* CSVGeneratorSwift.framework */,
-				"CSVGeneratorSwift::CSVGeneratorSwiftTests::Product" /* CSVGeneratorSwiftTests.xctest */,
-			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		OBJ_5 /*  */ = {
-			isa = PBXGroup;
-			children = (
+				DE57AB1023341BAE00D52C8A /* LICENSE */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_11 /* Tests */,
-				OBJ_17 /* Products */,
 				OBJ_20 /* README.md */,
+				DE57AB0F2334192100D52C8A /* CSVGeneratorSwift.framework */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -155,7 +145,7 @@
 			);
 			name = CSVGeneratorSwift;
 			productName = CSVGeneratorSwift;
-			productReference = "CSVGeneratorSwift::CSVGeneratorSwift::Product" /* CSVGeneratorSwift.framework */;
+			productReference = DE57AB0F2334192100D52C8A /* CSVGeneratorSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		"CSVGeneratorSwift::CSVGeneratorSwiftTests" /* CSVGeneratorSwiftTests */ = {
@@ -205,8 +195,8 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_17 /* Products */;
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_5;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -286,8 +276,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = CSVGeneratorSwift;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -314,8 +304,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = CSVGeneratorSwift;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -334,7 +324,7 @@
 					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -389,7 +379,7 @@
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
