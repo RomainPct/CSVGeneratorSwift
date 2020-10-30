@@ -20,7 +20,7 @@ It's also `customizable` and support  `Swift 5.1` !
 
 #### Swift Package Manager
 ```swift
-.package(url: "https://github.com/RomainPct/CSVGeneratorSwift", from: "1.0.0")
+.package(url: "https://github.com/RomainPct/CSVGeneratorSwift", from: "1.0.1")
 ```
 
 #### Carthage

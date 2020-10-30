@@ -103,7 +103,11 @@ public class CSVGeneratorSwift {
                     return String(describing: obj).replacingOccurrences(of: "\"", with: "\"\"")
                 }
             default:
-                return String(describing: obj).replacingOccurrences(of: "\"", with: "\"\"")
+                return String(describing: obj)
+                            .replacingOccurrences(of: "\"", with: "\"\"")
+                            .replacingOccurrences(of: "\r\n", with: " ")
+                            .replacingOccurrences(of: "\r", with: " ")
+                            .replacingOccurrences(of: "\n", with: " ")
             }
         }
         
