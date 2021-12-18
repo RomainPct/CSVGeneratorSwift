@@ -8,6 +8,18 @@
 import Foundation
 import CSVGeneratorSwift
 
+struct Truck : CSVExportable {
+    
+    var CSVFields: [Any] {
+        return [name,engine,optionalFields]
+    }
+    
+    let name:String
+    let engine:Engine
+    let optionalFields:[String:String]
+    
+}
+
 struct Car : CSVExportable {
     
     var CSVFields: [Any] {

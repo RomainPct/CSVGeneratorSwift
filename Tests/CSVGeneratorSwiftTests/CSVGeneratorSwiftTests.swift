@@ -18,6 +18,10 @@ final class CSVGeneratorSwiftTests: XCTestCase {
         XCTAssertEqual(defaultGenerator.getCSVString(from: quotesDictionary), CSVString_quotesDictionnary)
     }
     
+    func testComplexJson() {
+        XCTAssertEqual(defaultGenerator.getCSVString(from: trucks), CSVString_trucks)
+    }
+    
     func testDateFormatting() {
         let myDate = Date(timeIntervalSinceReferenceDate: 267682629)
         let generator = CSVGeneratorSwift()
@@ -47,6 +51,7 @@ final class CSVGeneratorSwiftTests: XCTestCase {
     static var allTests = [
         ("testComplexTextArray", testComplexTextArray),
         ("testComplexTextDictionnary", testComplexTextDictionnary),
+        ("testComplexJson", testComplexJson),
         ("testDateFormatting", testDateFormatting),
         ("testArrayCell", testArrayCell),
         ("testDictionaryCell", testDictionaryCell),

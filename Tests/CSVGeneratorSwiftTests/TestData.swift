@@ -54,3 +54,13 @@ let CSVString_users:String = #"""
 "0","Romain Penchenat","[""C-HR\"",\""[4360,1795,1565]\"",\""hybrid\"",\""1132"",""Model X\"",\""[5052,1999,1684]\"",\""electric\"",\""565""]"
 "1","Arthur Faure","[""Taycan\"",\""[4684,1923,1624]\"",\""electric\"",\""500""]"
 """#
+
+let trucks:[Truck] = [
+    Truck(name: "Cybertruck", engine: Engine(type: .electric, autonomy: 400), optionalFields: ["style":"wahou", "color":"grey"]),
+    Truck(name: "Rolls de José", engine: Engine(type: .combustion, autonomy: 800), optionalFields: ["style":"campagne"])
+]
+
+let CSVString_trucks:String = #"""
+"Cybertruck","electric","400","{  ""color"" : ""grey"",  ""style"" : ""wahou""}"
+"Rolls de José","combustion","800","{  ""style"" : ""campagne""}"
+"""#

@@ -69,7 +69,7 @@ public class CSVGeneratorSwift {
     
         internal func jsonEncodeObject(obj:Any) -> String {
             if let data = try? JSONSerialization.data(withJSONObject: obj, options: jsonWritingOptions) {
-                return String(data: data, encoding: encoding)?.replacingOccurrences(of: "\"", with: "\"\"") ?? "serialized_obj_to_string_failed"
+                return (String(data: data, encoding: encoding)?.replacingOccurrences(of: "\"", with: "\"\"") ?? "serialized_obj_to_string_failed").replacingOccurrences(of: "\n", with: "")
             } else {
                 return "serialization_error"
             }
