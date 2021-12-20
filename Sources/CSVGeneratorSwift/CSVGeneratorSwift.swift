@@ -26,11 +26,11 @@ public class CSVGeneratorSwift {
     
 //    MARK: CSV Generation functions for arrays
     public func generate<T : CSVExportable>(from data:[T], name:String = "\(String(describing: T.self))s") -> Result<URL,Error> {
-        let csvString = getCSVString(from: data)
+        let csvString = generateCSVString(from: data)
         return saveCSV(text: csvString, name: name)
     }
     
-    internal func getCSVString<T : CSVExportable>(from data:[T]) -> String {
+    public func generateCSVString<T : CSVExportable>(from data:[T]) -> String {
         return data.map { (csvExportable) -> String in
             return getRow(fromFields: csvExportable.CSVFields)
         }.joined(separator: lineEnd)
@@ -38,11 +38,11 @@ public class CSVGeneratorSwift {
     
 //    MARK: CSV Generation functions for dictionnaries
     public func generate<T : CSVExportable>(from data:[AnyHashable:T], name:String = "\(String(describing: T.self))s") -> Result<URL,Error> {
-        let csvString = getCSVString(from: data)
+        let csvString = generateCSVString(from: data)
         return saveCSV(text: csvString, name: name)
     }
     
-    internal func getCSVString<T : CSVExportable>(from data:[AnyHashable:T]) -> String {
+    public func generateCSVString<T : CSVExportable>(from data:[AnyHashable:T]) -> String {
         return data.map { (dict) -> String in
             var fields = dict.value.CSVFields
             fields.insert(dict.key, at: 0)

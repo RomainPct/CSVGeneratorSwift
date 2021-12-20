@@ -56,11 +56,16 @@ let CSVString_users:String = #"""
 """#
 
 let trucks:[Truck] = [
-    Truck(name: "Cybertruck", engine: Engine(type: .electric, autonomy: 400), optionalFields: ["style":"wahou", "color":"grey"]),
+    Truck(name: "Cybertruck", engine: Engine(type: .electric, autonomy: 400), optionalFields: ["color":"grey", "style":"wahou"]),
     Truck(name: "Rolls de José", engine: Engine(type: .combustion, autonomy: 800), optionalFields: ["style":"campagne"])
 ]
 
-let CSVString_trucks:String = #"""
+let CSVString_trucksP1:String = #"""
+"Cybertruck","electric","400","{  ""style"" : ""wahou"",  ""color"" : ""grey""}"
+"Rolls de José","combustion","800","{  ""style"" : ""campagne""}"
+"""#
+
+let CSVString_trucksP2:String = #"""
 "Cybertruck","electric","400","{  ""color"" : ""grey"",  ""style"" : ""wahou""}"
 "Rolls de José","combustion","800","{  ""style"" : ""campagne""}"
 """#

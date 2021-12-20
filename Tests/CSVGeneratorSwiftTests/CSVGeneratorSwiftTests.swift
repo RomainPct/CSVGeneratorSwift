@@ -11,15 +11,16 @@ final class CSVGeneratorSwiftTests: XCTestCase {
     }()
     
     func testComplexTextArray() {
-        XCTAssertEqual(defaultGenerator.getCSVString(from: quotes), CSVString_quotes)
+        XCTAssertEqual(defaultGenerator.generateCSVString(from: quotes), CSVString_quotes)
     }
     
     func testComplexTextDictionnary() {
-        XCTAssertEqual(defaultGenerator.getCSVString(from: quotesDictionary), CSVString_quotesDictionnary)
+        XCTAssertEqual(defaultGenerator.generateCSVString(from: quotesDictionary), CSVString_quotesDictionnary)
     }
     
     func testComplexJson() {
-        XCTAssertEqual(defaultGenerator.getCSVString(from: trucks), CSVString_trucks)
+        let string = defaultGenerator.generateCSVString(from: trucks)
+        XCTAssert(string == CSVString_trucksP1 || string == CSVString_trucksP2)
     }
     
     func testDateFormatting() {
@@ -41,11 +42,11 @@ final class CSVGeneratorSwiftTests: XCTestCase {
     }
     
     func testUnderCSVExportable() {
-        XCTAssertEqual(compactJSONGenerator.getCSVString(from: cars), CSVString_cars)
+        XCTAssertEqual(compactJSONGenerator.generateCSVString(from: cars), CSVString_cars)
     }
     
     func testArrayOfUnderCSVExportable() {
-        XCTAssertEqual(compactJSONGenerator.getCSVString(from: users), CSVString_users)
+        XCTAssertEqual(compactJSONGenerator.generateCSVString(from: users), CSVString_users)
     }
 
     static var allTests = [
